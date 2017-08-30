@@ -1,18 +1,18 @@
 <%= form_for @film do |f|%>
   <%= f.label :title %>
   <%= f.text_field :title %>
-
+<br />
   <%= f.label :genre %>
   <%= f.text_field :genre %>
-
+<br />
   <%= f.label :year %>
   <%= f.number_field :year %>
-
+<br />
   <%= f.label :picture, value: "Photo URL" %>
   <%= f.text_field :picture %>
-
+<br />
   <%= f.label :synopsis %>
   <%= f.text_field :synopsis %>
-
+<br />
   <%= f.submit %>
 <% end %>

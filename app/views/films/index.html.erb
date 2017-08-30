@@ -2,12 +2,8 @@
 
 <ul>
     <% @films.each do |film|%>
-        <%= link_to "(edit)", edit_film_path(film)%>
-        <%= image_tag film.picture %>
-        <li>TITLE: <%= film.title%></li>
-        <li>GENRE: <%= film.genre%></li>
-        <li>YEAR: <%= film.year%></li>
-        <li>SYNOPSIS: <%= film.synopsis%></li>
+            <%= image_tag film.picture %>
+            <h3><%= link_to film.title, film_path(film)%></h3>
     <% end %>
 </ul>
 

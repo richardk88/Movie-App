@@ -1,5 +1,6 @@
 <%= image_tag @film.picture%>
-<h1> <%= @film.title%> </h1>
+<h1> <%= @film.title%> <%= link_to "(edit)", edit_film_path(@film)%></h1> 
 <h4> <%= @film.genre%> </h4>
 <h4> <%= @film.year%> </h4>
 <h4> <%= @film.synopsis%> </h4>
+<%= button_to 'add to favorites', favorites_path(:film_id => @film.id), method: :post  %>
